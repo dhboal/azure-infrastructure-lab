@@ -1,0 +1,129 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": {
+                "type": "String",
+                "value": "eastus2"
+            }
+        },
+        "networkInterfaceName": {
+            "value": {
+                "type": "String",
+                "value": "vm-linux-01815"
+            }
+        },
+        "enableAcceleratedNetworking": {
+            "value": {
+                "type": "Bool",
+                "value": true
+            }
+        },
+        "subnetName": {
+            "value": {
+                "type": "String",
+                "value": "SNET-Workload"
+            }
+        },
+        "virtualNetworkId": {
+            "value": {
+                "type": "String",
+                "value": "/subscriptions/8f780ae7-471d-4e33-9901-a499a1ed75d7/resourceGroups/RG-Lab-01/providers/Microsoft.Network/virtualNetworks/VNET-Lab-01"
+            }
+        },
+        "publicIpAddressName": {
+            "value": {
+                "type": "String",
+                "value": "VM-Linux-01-ip"
+            }
+        },
+        "publicIpAddressType": {
+            "value": {
+                "type": "String",
+                "value": "Static"
+            }
+        },
+        "publicIpAddressSku": {
+            "value": {
+                "type": "String",
+                "value": "Standard"
+            }
+        },
+        "pipDeleteOption": {
+            "value": {
+                "type": "String",
+                "value": "Detach"
+            }
+        },
+        "virtualMachineName": {
+            "value": {
+                "type": "String",
+                "value": "VM-Linux-01"
+            }
+        },
+        "virtualMachineComputerName": {
+            "value": {
+                "type": "String",
+                "value": "VM-Linux-01"
+            }
+        },
+        "virtualMachineRG": {
+            "value": {
+                "type": "String",
+                "value": "RG-Lab-01"
+            }
+        },
+        "osDiskType": {
+            "value": {
+                "type": "String",
+                "value": "Premium_LRS"
+            }
+        },
+        "osDiskDeleteOption": {
+            "value": {
+                "type": "String",
+                "value": "Delete"
+            }
+        },
+        "virtualMachineSize": {
+            "value": {
+                "type": "String",
+                "value": "Standard_E2bds_v5"
+            }
+        },
+        "nicDeleteOption": {
+            "value": {
+                "type": "String",
+                "value": "Detach"
+            }
+        },
+        "hibernationEnabled": {
+            "value": {
+                "type": "Bool",
+                "value": false
+            }
+        },
+        "adminUsername": {
+            "value": {
+                "type": "String",
+                "value": "azureuser"
+            }
+        },
+        "adminPublicKey": {
+            "value": null
+        },
+        "enablePeriodicAssessment": {
+            "value": {
+                "type": "String",
+                "value": "ImageDefault"
+            }
+        },
+        "securityType": {
+            "value": {
+                "type": "String",
+                "value": "Standard"
+            }
+        }
+    }
+}
