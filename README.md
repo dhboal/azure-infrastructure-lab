@@ -20,7 +20,7 @@ This repository serves as a portfolio project highlighting Azure infrastructure 
 
 # Architecture
 
-```
+```text
                      Azure Resource Group
                               │
         ┌─────────────────────┴─────────────────────┐
@@ -68,14 +68,15 @@ This repository serves as a portfolio project highlighting Azure infrastructure 
 - Linux VM Deployment
 - Azure Storage Configuration
 - Azure Resource Group Management
-- Remote Administration (RDP / SSH)
+- Remote Administration using RDP and SSH
+- Private IP Connectivity Testing
 - Azure Portal Administration
 
 ---
 
 # Project Structure
 
-```
+```text
 azure-infrastructure-lab/
 │
 ├── ARM/
@@ -89,13 +90,18 @@ azure-infrastructure-lab/
 ├── Bicep/
 │
 ├── Screenshots/
-│   ├── resource-group.png
-│   ├── virtual-network.png
-│   ├── windows-vm.png
+│   ├── blob-properties-preview.png
+│   ├── connectivity-test.png
+│   ├── linux-ssh.png
 │   ├── linux-vm.png
-│   ├── storage-account.png
-│   ├── nsg-management.png
-│   └── nsg-workload.png
+│   ├── resource-group.png
+│   ├── resource-visualizer.png
+│   ├── storage-account-overview.png
+│   ├── virtual-network-configuration.png
+│   ├── virtual-network.png
+│   ├── windows-rdp-hostname.png
+│   ├── windows-rdp-ipconfig.png
+│   └── windows-vm.png
 │
 ├── LICENSE
 └── README.md
@@ -106,13 +112,13 @@ azure-infrastructure-lab/
 # Environment
 
 | Component | Configuration |
-|-----------|---------------|
+|---|---|
 | Cloud | Microsoft Azure |
 | Region | East US 2 |
-| IaC | ARM Templates |
+| Infrastructure as Code | ARM Templates |
 | Windows VM | Windows Server |
 | Linux VM | Ubuntu Linux |
-| Networking | Virtual Network + Subnets |
+| Networking | Virtual Network and Subnets |
 | Security | Network Security Groups |
 | Storage | Azure Storage Account |
 
@@ -123,61 +129,117 @@ azure-infrastructure-lab/
 The following functionality was verified after deployment:
 
 - Successful ARM template deployment
-- Resource Group creation
-- Virtual Network deployment
-- Subnet creation
+- Resource group creation
+- Virtual network deployment
+- Subnet creation and NSG association
 - Windows VM deployment
 - Linux VM deployment
-- RDP connectivity to Windows VM
-- SSH connectivity to Linux VM
+- RDP connectivity to the Windows VM
+- SSH connectivity to the Linux VM
+- Private IP communication between virtual machines
 - Network Security Group configuration
-- Storage Account deployment
-- Resource dependencies
+- Storage account deployment
+- Blob container creation and file upload
+- Resource dependency validation
 - Azure Portal resource management
 
 ---
 
-# Screenshots
+# Deployment Evidence and Validation
 
 ## Resource Group
 
-*Insert screenshot here*
+The Azure resource group contains the infrastructure resources deployed during the lab.
+
+![Azure Resource Group](Screenshots/resource-group.png)
 
 ---
 
-## Virtual Network
+## Resource Visualizer
 
-*Insert screenshot here*
+Azure Resource Visualizer displays the relationships and dependencies between the deployed resources.
+
+![Azure Resource Visualizer](Screenshots/resource-visualizer.png)
+
+---
+
+## Virtual Network Overview
+
+The virtual network provides the private address space used by the Windows and Linux virtual machines.
+
+![Azure Virtual Network Overview](Screenshots/virtual-network.png)
+
+---
+
+## Subnet and NSG Configuration
+
+The virtual network contains separate management and workload subnets. Network Security Groups are associated with the appropriate subnets to control traffic.
+
+![Virtual Network Subnet and NSG Configuration](Screenshots/virtual-network-configuration.png)
 
 ---
 
 ## Windows Virtual Machine
 
-*Insert screenshot here*
+A Windows Server virtual machine was deployed in the management subnet.
+
+![Windows Virtual Machine](Screenshots/windows-vm.png)
 
 ---
 
 ## Linux Virtual Machine
 
-*Insert screenshot here*
+An Ubuntu Linux virtual machine was deployed in the workload subnet.
+
+![Linux Virtual Machine](Screenshots/linux-vm.png)
 
 ---
 
-## Network Security Groups
+## Windows Hostname Validation
 
-### Management NSG
+Remote Desktop was used to connect to the Windows VM and verify its hostname.
 
-*Insert screenshot here*
+![Windows RDP Hostname Validation](Screenshots/windows-rdp-hostname.png)
 
-### Workload NSG
+---
 
-*Insert screenshot here*
+## Windows Network Configuration
+
+The Windows VM network configuration was verified using `ipconfig`.
+
+![Windows IP Configuration](Screenshots/windows-rdp-ipconfig.png)
+
+---
+
+## Linux SSH Validation
+
+SSH connectivity to the Linux VM was successfully established, and the system hostname and private IP configuration were verified.
+
+![Linux SSH Validation](Screenshots/linux-ssh.png)
+
+---
+
+## Private Network Connectivity Test
+
+Private connectivity between the Windows and Linux virtual machines was validated using ICMP traffic across the Azure virtual network.
+
+![Windows to Linux Connectivity Test](Screenshots/connectivity-test.png)
 
 ---
 
 ## Storage Account
 
-*Insert screenshot here*
+An Azure Storage Account was deployed as part of the infrastructure environment.
+
+![Azure Storage Account Overview](Screenshots/storage-account-overview.png)
+
+---
+
+## Blob Storage Validation
+
+A blob container was created and a test file was uploaded to verify that Blob Storage was functioning correctly.
+
+![Blob Properties and File Preview](Screenshots/blob-properties-preview.png)
 
 ---
 
@@ -209,6 +271,7 @@ This project was created to gain hands-on experience with:
 - Azure networking concepts
 - Resource management
 - Secure cloud administration
+- Windows and Linux remote administration
 - Cloud deployment best practices
 
 ---
@@ -218,7 +281,7 @@ This project was created to gain hands-on experience with:
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/azure-infrastructure-lab.git
+git clone https://github.com/dhboal/azure-infrastructure-lab.git
 ```
 
 Deploy the ARM templates using:
@@ -227,7 +290,7 @@ Deploy the ARM templates using:
 - Azure CLI
 - PowerShell
 
-> **Note:** Environment-specific values (such as subscription IDs, usernames, and other sensitive information) have been sanitized before publication.
+> **Note:** Environment-specific values, such as subscription IDs, usernames, public IP addresses, and other sensitive information, have been sanitized before publication.
 
 ---
 
@@ -257,7 +320,7 @@ Western Governors University (WGU)
 
 Cybersecurity | Cloud Security | Cloud Administration
 
-GitHub: https://github.com/YOUR-USERNAME
+GitHub: https://github.com/dhboal
 
 ---
 
