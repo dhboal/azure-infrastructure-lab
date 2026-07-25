@@ -74,41 +74,6 @@ This repository serves as a portfolio project highlighting Azure infrastructure 
 
 ---
 
-# Project Structure
-
-```text
-azure-infrastructure-lab/
-│
-├── ARM/
-│   ├── Windows-VM/
-│   ├── Linux-VM/
-│   ├── VNet/
-│   ├── Storage/
-│   ├── NSG-Management/
-│   └── NSG-Workload/
-│
-├── Bicep/
-│
-├── Screenshots/
-│   ├── blob-properties-preview.png
-│   ├── connectivity-test.png
-│   ├── linux-ssh.png
-│   ├── linux-vm.png
-│   ├── resource-group.png
-│   ├── resource-visualizer.png
-│   ├── storage-account-overview.png
-│   ├── virtual-network-configuration.png
-│   ├── virtual-network.png
-│   ├── windows-rdp-hostname.png
-│   ├── windows-rdp-ipconfig.png
-│   └── windows-vm.png
-│
-├── LICENSE
-└── README.md
-```
-
----
-
 # Environment
 
 | Component | Configuration |
@@ -290,7 +255,7 @@ Deploy the ARM templates using:
 - Azure CLI
 - PowerShell
 
-> **Note:** Environment-specific values, such as subscription IDs, usernames, public IP addresses, and other sensitive information, have been sanitized before publication.
+> **Note:** This project uses sample infrastructure created in a personal Azure subscription. No credentials, secrets, or other sensitive information are included in this repository.
 
 ---
 
