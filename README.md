@@ -1,4 +1,4 @@
-# Azure Infrastructure Lab
+# Azure Infrastructure Lab (ARM Templates)
 
 [![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4?logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/)
 [![ARM](https://img.shields.io/badge/Infrastructure-ARM_Templates-blue)](https://learn.microsoft.com/azure/azure-resource-manager/)
@@ -14,7 +14,7 @@ The lab was built after earning the **Microsoft Certified: Azure Administrator A
 
 The goal of this project is to showcase practical Azure skills in virtual networking, virtual machines, network security, storage, and Infrastructure as Code (IaC).
 
-This repository serves as a portfolio project highlighting Azure infrastructure deployment and administration skills relevant to cloud engineering, cloud administration, and cloud security roles.
+This repository serves as a portfolio project demonstrating practical Azure infrastructure deployment and administration skills.
 
 ---
 
@@ -208,22 +208,12 @@ A blob container was created and a test file was uploaded to verify that Blob St
 
 ---
 
-# Future Improvements
+# Future Enhancements
 
-This repository will continue to evolve as additional Azure services are explored.
+Potential future enhancements include:
 
-Planned enhancements include:
-
-- Rebuild the environment using **Bicep**
-- Azure Bastion
-- Azure Firewall
-- Azure Monitor
-- Log Analytics Workspace
-- Diagnostic Settings
-- Azure Backup
-- Role-Based Access Control (RBAC)
-- Private Endpoints
-- Azure Key Vault
+- Recreate the environment using Bicep
+- Expand the environment with additional Azure networking and security services
 
 ---
 
