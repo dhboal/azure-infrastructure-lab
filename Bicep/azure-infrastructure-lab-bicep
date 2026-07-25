@@ -1,0 +1,17 @@
+# Bicep Templates
+
+This folder will contain a Bicep implementation of the Azure Infrastructure Lab.
+
+The goal is to recreate the ARM template deployment using Bicep while following Infrastructure as Code (IaC) best practices.
+
+## Planned Resources
+
+- Resource Group
+- Virtual Network
+- Subnets
+- Network Security Groups
+- Windows Virtual Machine
+- Linux Virtual Machine
+- Storage Account
+
+This implementation is currently under development.
