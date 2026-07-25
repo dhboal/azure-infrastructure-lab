@@ -29,7 +29,7 @@
         "virtualNetworkId": {
             "value": {
                 "type": "String",
-                "value": "/subscriptions/8f780ae7-471d-4e33-9901-a499a1ed75d7/resourceGroups/RG-Lab-01/providers/Microsoft.Network/virtualNetworks/VNET-Lab-01"
+                "value": "/subscriptions/<subscription-id>/resourceGroups/RG-Lab-01/providers/Microsoft.Network/virtualNetworks/VNET-Lab-01"
             }
         },
         "publicIpAddressName": {
@@ -107,7 +107,7 @@
         "adminUsername": {
             "value": {
                 "type": "String",
-                "value": "azureuser"
+                "value": "azureadmin"
             }
         },
         "adminPublicKey": {
