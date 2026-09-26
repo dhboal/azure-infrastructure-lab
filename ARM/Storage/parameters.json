@@ -1,180 +1,93 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "location": {
-            "value": {
-                "type": "String",
-                "value": "eastus2"
-            }
-        },
-        "storageAccountName": {
-            "value": {
-                "type": "String",
-                "value": "stlab015812826"
-            }
-        },
-        "accountType": {
-            "value": {
-                "type": "String",
-                "value": "Standard_LRS"
-            }
-        },
-        "kind": {
-            "value": {
-                "type": "String",
-                "value": "StorageV2"
-            }
-        },
-        "minimumTlsVersion": {
-            "value": {
-                "type": "String",
-                "value": "TLS1_2"
-            }
-        },
-        "supportsHttpsTrafficOnly": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        },
-        "allowBlobPublicAccess": {
-            "value": {
-                "type": "Bool",
-                "value": false
-            }
-        },
-        "allowSharedKeyAccess": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        },
-        "defaultOAuth": {
-            "value": {
-                "type": "Bool",
-                "value": false
-            }
-        },
-        "accessTier": {
-            "value": {
-                "type": "String",
-                "value": "Hot"
-            }
-        },
-        "publicNetworkAccess": {
-            "value": {
-                "type": "String",
-                "value": "Enabled"
-            }
-        },
-        "allowCrossTenantReplication": {
-            "value": {
-                "type": "Bool",
-                "value": false
-            }
-        },
-        "networkAclsBypass": {
-            "value": {
-                "type": "String",
-                "value": "AzureServices"
-            }
-        },
-        "networkAclsDefaultAction": {
-            "value": {
-                "type": "String",
-                "value": "Allow"
-            }
-        },
-        "networkAclsIpRules": {
-            "value": {
-                "type": "Array",
-                "value": []
-            }
-        },
-        "networkAclsIpv6Rules": {
-            "value": {
-                "type": "Array",
-                "value": []
-            }
-        },
-        "publishIpv6Endpoint": {
-            "value": {
-                "type": "Bool",
-                "value": false
-            }
-        },
-        "dnsEndpointType": {
-            "value": {
-                "type": "String",
-                "value": "Standard"
-            }
-        },
-        "keySource": {
-            "value": {
-                "type": "String",
-                "value": "Microsoft.Storage"
-            }
-        },
-        "encryptionEnabled": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        },
-        "keyTypeForTableAndQueueEncryption": {
-            "value": {
-                "type": "String",
-                "value": "Account"
-            }
-        },
-        "infrastructureEncryptionEnabled": {
-            "value": {
-                "type": "Bool",
-                "value": false
-            }
-        },
-        "isBlobSoftDeleteEnabled": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        },
-        "blobSoftDeleteRetentionDays": {
-            "value": {
-                "type": "Int",
-                "value": 7
-            }
-        },
-        "isContainerSoftDeleteEnabled": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        },
-        "containerSoftDeleteRetentionDays": {
-            "value": {
-                "type": "Int",
-                "value": 7
-            }
-        },
-        "isShareSoftDeleteEnabled": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        },
-        "shareSoftDeleteRetentionDays": {
-            "value": {
-                "type": "Int",
-                "value": 7
-            }
-        },
-        "smbEncryptionInTransitEnabled": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        }
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus2"
+    },
+    "storageAccountName": {
+      "value": "stlab015812826"
+    },
+    "accountType": {
+      "value": "Standard_LRS"
+    },
+    "kind": {
+      "value": "StorageV2"
+    },
+    "minimumTlsVersion": {
+      "value": "TLS1_2"
+    },
+    "supportsHttpsTrafficOnly": {
+      "value": true
+    },
+    "allowBlobPublicAccess": {
+      "value": false
+    },
+    "allowSharedKeyAccess": {
+      "value": true
+    },
+    "defaultOAuth": {
+      "value": false
+    },
+    "accessTier": {
+      "value": "Hot"
+    },
+    "publicNetworkAccess": {
+      "value": "Disabled"
+    },
+    "allowCrossTenantReplication": {
+      "value": false
+    },
+    "networkAclsBypass": {
+      "value": "AzureServices"
+    },
+    "networkAclsDefaultAction": {
+      "value": "Deny"
+    },
+    "networkAclsIpRules": {
+      "value": []
+    },
+    "networkAclsIpv6Rules": {
+      "value": []
+    },
+    "publishIpv6Endpoint": {
+      "value": false
+    },
+    "dnsEndpointType": {
+      "value": "Standard"
+    },
+    "keySource": {
+      "value": "Microsoft.Storage"
+    },
+    "encryptionEnabled": {
+      "value": true
+    },
+    "keyTypeForTableAndQueueEncryption": {
+      "value": "Account"
+    },
+    "infrastructureEncryptionEnabled": {
+      "value": false
+    },
+    "isBlobSoftDeleteEnabled": {
+      "value": true
+    },
+    "blobSoftDeleteRetentionDays": {
+      "value": 7
+    },
+    "isContainerSoftDeleteEnabled": {
+      "value": true
+    },
+    "containerSoftDeleteRetentionDays": {
+      "value": 7
+    },
+    "isShareSoftDeleteEnabled": {
+      "value": true
+    },
+    "shareSoftDeleteRetentionDays": {
+      "value": 7
+    },
+    "smbEncryptionInTransitEnabled": {
+      "value": true
     }
+  }
 }
