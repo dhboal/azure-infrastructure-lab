@@ -217,6 +217,37 @@ Potential future enhancements include:
 
 ---
 
+# PowerShell Security Audit and Remediation
+
+On September 26, 2026, I redeployed the VNet, two NSGs, and storage account from the ARM templates in `RG-Lab-01`, then ran a read-only audit with [`Scripts/Test-AzureNetworkBaseline-v2.ps1`](Scripts/Test-AzureNetworkBaseline-v2.ps1). The script checks that each subnet has an NSG, counts custom NSG rules, flags broad inbound SSH/RDP rules, and reports storage HTTPS, TLS, anonymous blob access, and public network settings.
+
+```powershell
+./Scripts/Test-AzureNetworkBaseline-v2.ps1 -ResourceGroupName RG-Lab-01 -VirtualNetworkName VNET-Lab-01
+```
+
+The first run found `publicNetworkAccess=Enabled` and `networkAcls.defaultAction=Allow` on the storage account. Anonymous blob access was already disabled, so this finding concerned reachability of the authenticated storage endpoint, not public access to blob contents. I redeployed the storage ARM template with `publicNetworkAccess=Disabled` and `networkAclsDefaultAction=Deny`, then reran the audit. The storage network check changed from `REVIEW` to `PASS`.
+
+Redeployed subnet and storage evidence:
+
+![Redeployed subnet NSG associations](Screenshots/redeployment-subnets-nsgs.png)
+
+![Redeployed storage account overview](Screenshots/redeployment-storage-overview.png)
+
+| Check | Initial result | After remediation |
+|---|---|---|
+| Two subnet NSG associations | PASS | PASS |
+| Custom NSG rules | INFO: 0; Azure default rules apply | INFO: 0 |
+| HTTPS only, TLS 1.2, anonymous blobs disabled | PASS | PASS |
+| Storage public network / default firewall action | REVIEW: Enabled / Allow | PASS: Disabled / Deny |
+
+![Audit before storage remediation](Screenshots/network-audit-before.png)
+
+![Audit after storage remediation](Screenshots/network-audit-after.png)
+
+The storage parameter file now records the secure network settings for future deployments. Subnet NSG associations were applied with Azure CLI after the VNet and NSG ARM deployments; the VNet template does not yet declare those associations. The audit reports configuration, and its `PASS` result is limited to the checks implemented in the script. The temporary resource group can be deleted after evidence collection to avoid ongoing charges.
+
+---
+
 # Learning Objectives
 
 This project was created to gain hands-on experience with:
