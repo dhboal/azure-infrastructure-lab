@@ -1,153 +1,78 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "location": {
-            "value": {
-                "type": "String",
-                "value": "eastus2"
-            }
-        },
-        "networkInterfaceName": {
-            "value": {
-                "type": "String",
-                "value": "vm-win-01778"
-            }
-        },
-        "enableAcceleratedNetworking": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        },
-        "subnetName": {
-            "value": {
-                "type": "String",
-                "value": "SNET-Management"
-            }
-        },
-        "virtualNetworkId": {
-            "value": {
-                "type": "String",
-                "value": "/subscriptions/<subscription-id>/resourceGroups/RG-Lab-01/providers/Microsoft.Network/virtualNetworks/VNET-Lab-01"
-            }
-        },
-        "publicIpAddressName": {
-            "value": {
-                "type": "String",
-                "value": "VM-WIN-01-ip"
-            }
-        },
-        "publicIpAddressType": {
-            "value": {
-                "type": "String",
-                "value": "Static"
-            }
-        },
-        "publicIpAddressSku": {
-            "value": {
-                "type": "String",
-                "value": "Standard"
-            }
-        },
-        "pipDeleteOption": {
-            "value": {
-                "type": "String",
-                "value": "Detach"
-            }
-        },
-        "virtualMachineName": {
-            "value": {
-                "type": "String",
-                "value": "VM-WIN-01"
-            }
-        },
-        "virtualMachineComputerName": {
-            "value": {
-                "type": "String",
-                "value": "VM-WIN-01"
-            }
-        },
-        "virtualMachineRG": {
-            "value": {
-                "type": "String",
-                "value": "RG-Lab-01"
-            }
-        },
-        "osDiskType": {
-            "value": {
-                "type": "String",
-                "value": "Premium_LRS"
-            }
-        },
-        "osDiskDeleteOption": {
-            "value": {
-                "type": "String",
-                "value": "Delete"
-            }
-        },
-        "virtualMachineSize": {
-            "value": {
-                "type": "String",
-                "value": "Standard_E2bds_v5"
-            }
-        },
-        "nicDeleteOption": {
-            "value": {
-                "type": "String",
-                "value": "Detach"
-            }
-        },
-        "hibernationEnabled": {
-            "value": {
-                "type": "Bool",
-                "value": false
-            }
-        },
-        "adminUsername": {
-            "value": {
-                "type": "String",
-                "value": "azureadmin"
-            }
-        },
-        "adminPassword": {
-            "value": null
-        },
-        "patchMode": {
-            "value": {
-                "type": "String",
-                "value": "AutomaticByOS"
-            }
-        },
-        "enablePeriodicAssessment": {
-            "value": {
-                "type": "String",
-                "value": "ImageDefault"
-            }
-        },
-        "enableHotpatching": {
-            "value": {
-                "type": "Bool",
-                "value": false
-            }
-        },
-        "securityType": {
-            "value": {
-                "type": "String",
-                "value": "TrustedLaunch"
-            }
-        },
-        "secureBoot": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        },
-        "vTPM": {
-            "value": {
-                "type": "Bool",
-                "value": true
-            }
-        }
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus2"
+    },
+    "networkInterfaceName": {
+      "value": "vm-win-01778"
+    },
+    "enableAcceleratedNetworking": {
+      "value": true
+    },
+    "subnetName": {
+      "value": "SNET-Management"
+    },
+    "virtualNetworkId": {
+      "value": "/subscriptions/<subscription-id>/resourceGroups/RG-Lab-01/providers/Microsoft.Network/virtualNetworks/VNET-Lab-01"
+    },
+    "publicIpAddressName": {
+      "value": "VM-WIN-01-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Static"
+    },
+    "publicIpAddressSku": {
+      "value": "Standard"
+    },
+    "pipDeleteOption": {
+      "value": "Detach"
+    },
+    "virtualMachineName": {
+      "value": "VM-WIN-01"
+    },
+    "virtualMachineComputerName": {
+      "value": "VM-WIN-01"
+    },
+    "virtualMachineRG": {
+      "value": "RG-Lab-01"
+    },
+    "osDiskType": {
+      "value": "Premium_LRS"
+    },
+    "osDiskDeleteOption": {
+      "value": "Delete"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_E2bds_v5"
+    },
+    "nicDeleteOption": {
+      "value": "Detach"
+    },
+    "hibernationEnabled": {
+      "value": false
+    },
+    "adminUsername": {
+      "value": "azureadmin"
+    },
+    "patchMode": {
+      "value": "AutomaticByOS"
+    },
+    "enablePeriodicAssessment": {
+      "value": "ImageDefault"
+    },
+    "enableHotpatching": {
+      "value": false
+    },
+    "securityType": {
+      "value": "TrustedLaunch"
+    },
+    "secureBoot": {
+      "value": true
+    },
+    "vTPM": {
+      "value": true
     }
+  }
 }
