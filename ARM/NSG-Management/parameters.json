@@ -1,18 +1,12 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "networkSecurityGroupName": {
-            "value": {
-                "type": "String",
-                "value": "NSG-Management"
-            }
-        },
-        "location": {
-            "value": {
-                "type": "String",
-                "value": "eastus2"
-            }
-        }
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "networkSecurityGroupName": {
+      "value": "NSG-Management"
+    },
+    "location": {
+      "value": "eastus2"
     }
+  }
 }
